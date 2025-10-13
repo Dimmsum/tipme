@@ -1,9 +1,45 @@
-import React, { useState } from 'react';
-import { DollarSign, QrCode, CreditCard, BarChart3, Zap, Smartphone, Shield, Menu, X, ArrowRight, Play, Check, ChevronDown, Star, Users, TrendingUp } from 'lucide-react';
-
+import React, { useState, useEffect } from 'react';
+import { DollarSign, QrCode, CreditCard, BarChart3, Zap, Smartphone, Shield, Menu, X, ArrowRight, Play, Check, ChevronDown, Star, Scan, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      title: "1. Create Your QR Code",
+      description: "Get your personalized QR code instantly",
+      icon: QrCode
+    },
+    {
+      title: "2. Get It Scanned",
+      description: "Customer scans with their phone camera",
+      icon: Scan
+    },
+    {
+      title: "3. Receive Payment",
+      description: "Tip arrives instantly to your wallet",
+      icon: CheckCircle
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  // Auto-cycle every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [currentSlide]);
 
   const faqs = [
     {
@@ -94,9 +130,9 @@ export default function LandingPage() {
             </div>
             
             <div className="flex items-center space-x-4">
-              <button className="hidden md:block text-gray-600 hover:text-gray-900 font-medium transition">
+              <Link to="/auth" className="hidden md:block text-gray-600 hover:text-gray-900 font-medium transition" >
                 Sign In
-              </button>
+              </Link>
               <button className="bg-gradient-to-r from-purple-700 to-purple-400 text-white px-6 py-2.5 rounded-lg font-semibold hover:opacity-90 transition">
                 Get Started
               </button>
@@ -167,16 +203,63 @@ export default function LandingPage() {
             </div>
             
             <div className="relative">
-              <div className="animate-float">
-                <div className="bg-white rounded-2xl p-8 shadow-2xl mx-auto max-w-sm">
-                  <div className="aspect-square bg-gradient-to-br from-purple-100 to-indigo-100 rounded-lg flex items-center justify-center">
-                    <div className="text-center space-y-4">
-                      <div className="w-48 h-48 bg-white rounded-lg mx-auto flex items-center justify-center border-4 border-gray-800 p-4">
-                        <QrCode className="w-full h-full" />
+              <div className="relative bg-white rounded-2xl p-8 shadow-2xl mx-auto max-w-sm">
+                {/* Carousel Content */}
+                <div className="relative h-96">
+                  {slides.map((slide, idx) => {
+                    const IconComponent = slide.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+                          idx === currentSlide
+                            ? 'opacity-100 translate-x-0'
+                            : idx < currentSlide
+                            ? 'opacity-0 -translate-x-full'
+                            : 'opacity-0 translate-x-full'
+                        }`}
+                      >
+                        <div className="h-full flex flex-col items-center justify-center space-y-6">
+                          <div className="w-48 h-48 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl flex items-center justify-center p-8 text-purple-600">
+                            <IconComponent className="w-full h-full" strokeWidth={1.5} />
+                          </div>
+                          <div className="text-center">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">{slide.title}</h3>
+                            <p className="text-gray-600">{slide.description}</p>
+                          </div>
+                        </div>
                       </div>
-                      <p className="font-semibold text-gray-700">Scan to Tip</p>
-                    </div>
-                  </div>
+                    );
+                  })}
+                </div>
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition z-10"
+                >
+                  <ChevronLeft className="w-6 h-6 text-gray-700" />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition z-10"
+                >
+                  <ChevronRight className="w-6 h-6 text-gray-700" />
+                </button>
+
+                {/* Dots Indicator */}
+                <div className="flex justify-center space-x-2 mt-4">
+                  {slides.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentSlide(idx)}
+                      className={`h-2 rounded-full transition-all ${
+                        idx === currentSlide
+                          ? 'w-8 bg-purple-600'
+                          : 'w-2 bg-gray-300 hover:bg-gray-400'
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
               
