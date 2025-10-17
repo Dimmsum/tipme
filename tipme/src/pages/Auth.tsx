@@ -1,4 +1,5 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
+import tipmeLogo from "../assets/tipme.png";
 import {
   DollarSign,
   Mail,
@@ -41,14 +42,6 @@ export default function AuthPage() {
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8 items-center relative z-10">
         {/* Left Side Branding */}
         <div className="hidden md:block space-y-8">
-          <div className="flex items-center space-x-3">
-            <div className="w-14 h-14 bg-gradient-to-br from-blue-700 to-blue-400 rounded-2xl flex items-center justify-center shadow-lg">
-              <DollarSign className="w-8 h-8 text-white" />
-            </div>
-            <span className="text-4xl font-bold bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
-              Tip Me
-            </span>
-          </div>
 
           <div className="space-y-6">
             <h1 className="text-5xl font-bold text-gray-900 leading-tight">
