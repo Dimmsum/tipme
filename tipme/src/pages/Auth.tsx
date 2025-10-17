@@ -6,20 +6,20 @@ export default function AuthPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 flex items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center p-6 relative overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full opacity-20 blur-3xl animate-float"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full opacity-20 blur-3xl animate-float"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-300 rounded-full opacity-20 blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-purple-400 rounded-full opacity-10 blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-400 rounded-full opacity-10 blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
 
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8 items-center relative z-10">
         {/* Left Side - Branding */}
         <div className="hidden md:block space-y-8">
           <div className="flex items-center space-x-3">
-            <div className="w-14 h-14 bg-gradient-to-br from-purple-700 to-purple-400 rounded-2xl flex items-center justify-center shadow-lg">
+            <div className="w-14 h-14 bg-gradient-to-br from-blue-700 to-blue-400 rounded-2xl flex items-center justify-center shadow-lg">
               <DollarSign className="w-8 h-8 text-white" />
             </div>
-            <span className="text-4xl font-bold bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-4xl font-bold bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
               Tip Me
             </span>
           </div>
@@ -27,7 +27,7 @@ export default function AuthPage() {
           <div className="space-y-6">
             <h1 className="text-5xl font-bold text-gray-900 leading-tight">
               Start Earning
-              <span className="bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent"> More Tips</span>
+              <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent"> More Tips</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Join thousands of service workers who've increased their earnings with instant digital tips.
@@ -36,14 +36,14 @@ export default function AuthPage() {
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-6 pt-8">
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-purple-100">
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent mb-1">
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-100">
+              <div className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent mb-1">
                 5,000+
               </div>
               <div className="text-gray-600 text-sm">Active Workers</div>
             </div>
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-purple-100">
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent mb-1">
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-100">
+              <div className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent mb-1">
                 $2M+
               </div>
               <div className="text-gray-600 text-sm">Tips Processed</div>
@@ -55,10 +55,10 @@ export default function AuthPage() {
         <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 relative">
           {/* Mobile Logo */}
           <div className="md:hidden flex items-center justify-center space-x-2 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-700 to-purple-400 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-blue-400 rounded-xl flex items-center justify-center">
               <DollarSign className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
               Tip Me
             </span>
           </div>
@@ -69,7 +69,7 @@ export default function AuthPage() {
               onClick={() => setIsLogin(true)}
               className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all ${
                 isLogin
-                  ? 'bg-gradient-to-r from-purple-700 to-purple-400 text-white shadow-md'
+                  ? 'bg-gradient-to-r from-blue-700 to-blue-400 text-white shadow-md'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -79,7 +79,7 @@ export default function AuthPage() {
               onClick={() => setIsLogin(false)}
               className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all ${
                 !isLogin
-                  ? 'bg-gradient-to-r from-purple-700 to-purple-400 text-white shadow-md'
+                  ? 'bg-gradient-to-r from-blue-700 to-blue-400 text-white shadow-md'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -111,7 +111,7 @@ export default function AuthPage() {
                     <input
                       type="text"
                       placeholder="John Doe"
-                      className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:border-purple-400 focus:outline-none transition"
+                      className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:border-blue-400 focus:outline-none transition"
                     />
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function AuthPage() {
                   <input
                     type="email"
                     placeholder="you@example.com"
-                    className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:border-purple-400 focus:outline-none transition"
+                    className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:border-blue-400 focus:outline-none transition"
                   />
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function AuthPage() {
                     <input
                       type="text"
                       placeholder="Server, Barista, Driver, etc."
-                      className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:border-purple-400 focus:outline-none transition"
+                      className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:border-blue-400 focus:outline-none transition"
                     />
                   </div>
                 </div>
@@ -156,7 +156,7 @@ export default function AuthPage() {
                   <input
                     type={showPassword ? 'text' : 'password'}
                     placeholder="••••••••"
-                    className="w-full pl-12 pr-12 py-3.5 border-2 border-gray-200 rounded-xl focus:border-purple-400 focus:outline-none transition"
+                    className="w-full pl-12 pr-12 py-3.5 border-2 border-gray-200 rounded-xl focus:border-blue-400 focus:outline-none transition"
                   />
                   <button
                     onClick={() => setShowPassword(!showPassword)}
@@ -176,11 +176,11 @@ export default function AuthPage() {
                   <label className="flex items-center space-x-2 cursor-pointer">
                     <input
                       type="checkbox"
-                      className="w-4 h-4 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                      className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                     />
                     <span className="text-sm text-gray-600">Remember me</span>
                   </label>
-                  <a href="#" className="text-sm text-purple-600 hover:text-purple-700 font-medium">
+                  <a href="#" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
                     Forgot password?
                   </a>
                 </div>
@@ -190,15 +190,15 @@ export default function AuthPage() {
                 <label className="flex items-start space-x-2 cursor-pointer">
                   <input
                     type="checkbox"
-                    className="w-4 h-4 mt-1 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                    className="w-4 h-4 mt-1 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
                   <span className="text-sm text-gray-600">
                     I agree to the{' '}
-                    <a href="#" className="text-purple-600 hover:text-purple-700 font-medium">
+                    <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
                       Terms of Service
                     </a>{' '}
                     and{' '}
-                    <a href="#" className="text-purple-600 hover:text-purple-700 font-medium">
+                    <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
                       Privacy Policy
                     </a>
                   </span>
@@ -206,7 +206,7 @@ export default function AuthPage() {
               )}
             </div>
 
-            <button className="w-full bg-gradient-to-r from-purple-700 to-purple-400 text-white py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition flex items-center justify-center space-x-2 shadow-lg">
+            <button className="w-full bg-gradient-to-r from-blue-700 to-blue-400 text-white py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition flex items-center justify-center space-x-2 shadow-lg">
               <span>{isLogin ? 'Sign In' : 'Create Account'}</span>
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -253,8 +253,8 @@ export default function AuthPage() {
             </div>
 
             {!isLogin && (
-              <div className="text-center text-sm text-gray-500 bg-purple-50 rounded-lg p-4">
-                <p className="font-medium text-purple-700 mb-1">🎉 Special Offer</p>
+              <div className="text-center text-sm text-gray-500 bg-blue-50 rounded-lg p-4">
+                <p className="font-medium text-blue-700 mb-1">🎉 Special Offer</p>
                 <p>Get your first 30 days of Pro free when you sign up today!</p>
               </div>
             )}

@@ -6,12 +6,11 @@ export default function Dashboard() {
   const [filterOpen, setFilterOpen] = useState(false);
   const [selectedPeriod, setSelectedPeriod] = useState('week');
 
-  // Mock user data
   const user = {
     name: "Maria Santos",
     role: "Restaurant Server",
     email: "maria.santos@email.com",
-    avatar: "bg-purple-200",
+    avatar: "bg-blue-200",
     joinDate: "January 2025",
     totalEarnings: 12450.75,
     thisMonth: 3280.50,
@@ -19,7 +18,6 @@ export default function Dashboard() {
     totalTips: 1247
   };
 
-  // Mock transaction data
   const transactions = [
     { id: 1, customer: "Anonymous", amount: 15.00, date: "2025-10-13", time: "2:34 PM", type: "tip", status: "completed" },
     { id: 2, customer: "John D.", amount: 8.50, date: "2025-10-13", time: "1:15 PM", type: "tip", status: "completed" },
@@ -38,7 +36,7 @@ export default function Dashboard() {
       change: "+12.5%",
       trend: "up",
       icon: DollarSign,
-      color: "from-purple-700 to-purple-400"
+      color: "from-blue-700 to-blue-500"
     },
     {
       label: "Total Tips",
@@ -46,7 +44,7 @@ export default function Dashboard() {
       change: "+23",
       trend: "up",
       icon: TrendingUp,
-      color: "from-indigo-600 to-indigo-400"
+      color: "from-blue-600 to-blue-400"
     },
     {
       label: "Avg Tip Amount",
@@ -54,7 +52,7 @@ export default function Dashboard() {
       change: "+5.2%",
       trend: "up",
       icon: CreditCard,
-      color: "from-purple-500 to-pink-400"
+      color: "from-blue-500 to-cyan-400"
     },
     {
       label: "Profile Views",
@@ -62,30 +60,27 @@ export default function Dashboard() {
       change: "+18",
       trend: "up",
       icon: Eye,
-      color: "from-blue-500 to-cyan-400"
+      color: "from-blue-600 to-cyan-500"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Sidebar */}
       <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="h-full flex flex-col">
-          {/* Logo */}
           <div className="p-6 border-b border-gray-200">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-700 to-purple-400 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-blue-500 rounded-xl flex items-center justify-center">
                 <DollarSign className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
                 Tip Me
               </span>
             </div>
           </div>
 
-          {/* Navigation */}
           <nav className="flex-1 p-4 space-y-2">
-            <a href="#" className="flex items-center space-x-3 px-4 py-3 bg-gradient-to-r from-purple-700 to-purple-400 text-white rounded-lg font-medium">
+            <a href="#" className="flex items-center space-x-3 px-4 py-3 bg-gradient-to-r from-blue-700 to-blue-500 text-white rounded-lg font-medium">
               <TrendingUp className="w-5 h-5" />
               <span>Dashboard</span>
             </a>
@@ -99,10 +94,9 @@ export default function Dashboard() {
             </a>
           </nav>
 
-          {/* User Profile */}
           <div className="p-4 border-t border-gray-200">
             <div className="flex items-center space-x-3 mb-4">
-              <div className={`w-10 h-10 ${user.avatar} rounded-full flex items-center justify-center font-semibold text-purple-700`}>
+              <div className={`w-10 h-10 ${user.avatar} rounded-full flex items-center justify-center font-semibold text-blue-700`}>
                 {user.name.split(' ').map(n => n[0]).join('')}
               </div>
               <div className="flex-1 min-w-0">
@@ -118,9 +112,7 @@ export default function Dashboard() {
         </div>
       </aside>
 
-      {/* Main Content */}
       <div className="lg:pl-64">
-        {/* Header */}
         <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
           <div className="px-6 py-4">
             <div className="flex items-center justify-between">
@@ -142,7 +134,7 @@ export default function Dashboard() {
                   <Download className="w-4 h-4" />
                   <span className="hidden sm:inline">Export</span>
                 </button>
-                <button className="px-4 py-2 bg-gradient-to-r from-purple-700 to-purple-400 text-white rounded-lg font-semibold hover:opacity-90 transition flex items-center space-x-2">
+                <button className="px-4 py-2 bg-gradient-to-r from-blue-700 to-blue-500 text-white rounded-lg font-semibold hover:opacity-90 transition flex items-center space-x-2">
                   <Download className="w-4 h-4" />
                   <span className="hidden sm:inline">Cash Out</span>
                 </button>
@@ -151,9 +143,7 @@ export default function Dashboard() {
           </div>
         </header>
 
-        {/* Dashboard Content */}
         <main className="p-6 space-y-6">
-          {/* Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, idx) => {
               const IconComponent = stat.icon;
@@ -175,14 +165,12 @@ export default function Dashboard() {
             })}
           </div>
 
-          {/* Profile Overview & Quick Actions */}
           <div className="grid lg:grid-cols-3 gap-6">
-            {/* Profile Card */}
             <div className="lg:col-span-1 bg-white rounded-xl p-6 border border-gray-200">
               <h2 className="text-lg font-bold text-gray-900 mb-4">Profile Overview</h2>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className={`w-16 h-16 ${user.avatar} rounded-full flex items-center justify-center text-2xl font-bold text-purple-700`}>
+                  <div className={`w-16 h-16 ${user.avatar} rounded-full flex items-center justify-center text-2xl font-bold text-blue-700`}>
                     {user.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>
@@ -206,37 +194,36 @@ export default function Dashboard() {
                   </div>
                 </div>
 
-                <button className="w-full mt-4 px-4 py-2 border border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-50 transition">
+                <button className="w-full mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition">
                   View Full Profile
                 </button>
               </div>
             </div>
 
-            {/* Wallet Card */}
-            <div className="lg:col-span-2 bg-gradient-to-br from-purple-700 to-purple-400 rounded-xl p-6 text-white">
+            <div className="lg:col-span-2 bg-gradient-to-br from-blue-700 to-blue-500 rounded-xl p-6 text-white">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-bold">My Wallet</h2>
                 <QrCode className="w-6 h-6" />
               </div>
               
               <div className="mb-8">
-                <p className="text-purple-100 text-sm mb-2">Available Balance</p>
+                <p className="text-blue-100 text-sm mb-2">Available Balance</p>
                 <p className="text-5xl font-bold">${user.thisMonth.toFixed(2)}</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <p className="text-purple-100 text-xs mb-1">This Week</p>
+                  <p className="text-blue-100 text-xs mb-1">This Week</p>
                   <p className="text-2xl font-bold">$487.50</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <p className="text-purple-100 text-xs mb-1">Pending</p>
+                  <p className="text-blue-100 text-xs mb-1">Pending</p>
                   <p className="text-2xl font-bold">$43.50</p>
                 </div>
               </div>
 
               <div className="flex gap-3">
-                <button className="flex-1 bg-white text-purple-700 px-4 py-3 rounded-lg font-semibold hover:bg-gray-100 transition flex items-center justify-center space-x-2">
+                <button className="flex-1 bg-white text-blue-700 px-4 py-3 rounded-lg font-semibold hover:bg-gray-100 transition flex items-center justify-center space-x-2">
                   <Download className="w-4 h-4" />
                   <span>Cash Out</span>
                 </button>
@@ -248,7 +235,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Transaction History */}
           <div className="bg-white rounded-xl border border-gray-200">
             <div className="p-6 border-b border-gray-200">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -263,7 +249,7 @@ export default function Dashboard() {
                     <input
                       type="text"
                       placeholder="Search..."
-                      className="pl-9 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                      className="pl-9 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     />
                   </div>
                   <button 
@@ -284,7 +270,7 @@ export default function Dashboard() {
                       onClick={() => setSelectedPeriod(period.toLowerCase())}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
                         selectedPeriod === period.toLowerCase()
-                          ? 'bg-purple-600 text-white'
+                          ? 'bg-blue-600 text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                     >
@@ -299,21 +285,11 @@ export default function Dashboard() {
               <table className="w-full">
                 <thead className="bg-gray-50 border-b border-gray-200">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      Date
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      Customer
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      Type
-                    </th>
-                    <th className="px-6 py-3 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      Amount
-                    </th>
-                    <th className="px-6 py-3 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      Status
-                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Date</th>
+                    <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Customer</th>
+                    <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Type</th>
+                    <th className="px-6 py-3 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">Amount</th>
+                    <th className="px-6 py-3 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
@@ -358,7 +334,7 @@ export default function Dashboard() {
 
             <div className="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
               <p className="text-sm text-gray-600">Showing 8 of 1,247 transactions</p>
-              <button className="text-sm font-medium text-purple-600 hover:text-purple-700 transition">
+              <button className="text-sm font-medium text-blue-600 hover:text-blue-700 transition">
                 View All Transactions →
               </button>
             </div>
@@ -366,7 +342,6 @@ export default function Dashboard() {
         </main>
       </div>
 
-      {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"

@@ -80,21 +80,21 @@ export default function LandingPage() {
     {
       name: "Maria Santos",
       role: "Restaurant Server",
-      image: "bg-purple-200",
+      image: "bg-blue-200",
       rating: 5,
       text: "Game changer! I've increased my tips by 40% since using Tip Me. Customers love how easy it is."
     },
     {
       name: "James Wilson",
       role: "Barista",
-      image: "bg-indigo-200",
+      image: "bg-cyan-200",
       rating: 5,
       text: "No more fumbling with cash. Everything's tracked automatically and I can cash out whenever I want."
     },
     {
       name: "Sofia Rodriguez",
       role: "Delivery Driver",
-      image: "bg-purple-300",
+      image: "bg-indigo-300",
       rating: 5,
       text: "The QR code on my delivery bag has been a huge hit. Tips have never been easier to collect!"
     }
@@ -114,10 +114,10 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-700 to-purple-400 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-blue-400 rounded-xl flex items-center justify-center">
                 <DollarSign className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
                 Tip Me
               </span>
             </div>
@@ -133,7 +133,7 @@ export default function LandingPage() {
               <Link to="/auth" className="hidden md:block text-gray-600 hover:text-gray-900 font-medium transition" >
                 Sign In
               </Link>
-              <button className="bg-gradient-to-r from-purple-700 to-purple-400 text-white px-6 py-2.5 rounded-lg font-semibold hover:opacity-90 transition">
+              <button className="bg-gradient-to-r from-blue-700 to-blue-400 text-white px-6 py-2.5 rounded-lg font-semibold hover:opacity-90 transition">
                 Get Started
               </button>
               <button 
@@ -161,15 +161,11 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="inline-block">
-                <span className="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
-                  ✨ No App Required
-                </span>
-              </div>
+             
               
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
                 Tipping Made
-                <span className="bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent"> Instant</span>
+                <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent"> Instant</span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
@@ -177,7 +173,7 @@ export default function LandingPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-purple-700 to-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition flex items-center justify-center space-x-2">
+                <button className="bg-gradient-to-r from-blue-700 to-blue-400 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition flex items-center justify-center space-x-2">
                   <span>Start Earning Tips</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
@@ -189,9 +185,9 @@ export default function LandingPage() {
               
               <div className="flex items-center space-x-6 pt-4">
                 <div className="flex -space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-purple-200 border-2 border-white"></div>
+                  <div className="w-10 h-10 rounded-full bg-blue-200 border-2 border-white"></div>
                   <div className="w-10 h-10 rounded-full bg-indigo-200 border-2 border-white"></div>
-                  <div className="w-10 h-10 rounded-full bg-purple-300 border-2 border-white"></div>
+                  <div className="w-10 h-10 rounded-full bg-blue-300 border-2 border-white"></div>
                   <div className="w-10 h-10 rounded-full bg-indigo-300 border-2 border-white"></div>
                 </div>
                 <div>
@@ -220,7 +216,7 @@ export default function LandingPage() {
                         }`}
                       >
                         <div className="h-full flex flex-col items-center justify-center space-y-6">
-                          <div className="w-48 h-48 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl flex items-center justify-center p-8 text-purple-600">
+                          <div className="w-48 h-48 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center p-8 text-blue-600">
                             <IconComponent className="w-full h-full" strokeWidth={1.5} />
                           </div>
                           <div className="text-center">
@@ -255,7 +251,7 @@ export default function LandingPage() {
                       onClick={() => setCurrentSlide(idx)}
                       className={`h-2 rounded-full transition-all ${
                         idx === currentSlide
-                          ? 'w-8 bg-purple-600'
+                          ? 'w-8 bg-blue-600'
                           : 'w-2 bg-gray-300 hover:bg-gray-400'
                       }`}
                     />
@@ -263,7 +259,7 @@ export default function LandingPage() {
                 </div>
               </div>
               
-              <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-purple-700 to-purple-400 rounded-full opacity-20 blur-3xl"></div>
+              <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-blue-700 to-blue-400 rounded-full opacity-20 blur-3xl"></div>
               <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-indigo-400 rounded-full opacity-20 blur-3xl"></div>
             </div>
           </div>
@@ -276,7 +272,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -290,9 +286,9 @@ export default function LandingPage() {
       <section id="features" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-purple-600 font-semibold text-sm uppercase tracking-wide">Features</span>
+            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">Features</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
-              Everything You Need to <span className="bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">Earn More</span>
+              Everything You Need to <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">Earn More</span>
             </h2>
           </div>
           
@@ -330,7 +326,7 @@ export default function LandingPage() {
               }
             ].map((feature, idx) => (
               <div key={idx} className="bg-white border border-gray-100 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-700 to-purple-400 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-700 to-blue-400 rounded-xl flex items-center justify-center mb-6">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -345,9 +341,9 @@ export default function LandingPage() {
       <section id="how-it-works" className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-purple-600 font-semibold text-sm uppercase tracking-wide">How It Works</span>
+            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">How It Works</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
-              Start Earning in <span className="bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">3 Simple Steps</span>
+              Start Earning in <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">3 Simple Steps</span>
             </h2>
           </div>
           
@@ -370,7 +366,7 @@ export default function LandingPage() {
               }
             ].map((item, idx) => (
               <div key={idx} className="text-center relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-700 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold shadow-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-700 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold shadow-lg">
                   {item.step}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
@@ -385,9 +381,9 @@ export default function LandingPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-purple-600 font-semibold text-sm uppercase tracking-wide">Testimonials</span>
+            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">Testimonials</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
-              Loved by <span className="bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">Service Workers</span>
+              Loved by <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">Service Workers</span>
             </h2>
           </div>
           
@@ -417,9 +413,9 @@ export default function LandingPage() {
       <section id="pricing" className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-purple-600 font-semibold text-sm uppercase tracking-wide">Pricing</span>
+            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">Pricing</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
-              Simple, <span className="bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">Transparent Pricing</span>
+              Simple, <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">Transparent Pricing</span>
             </h2>
             <p className="text-xl text-gray-600 mt-4">No monthly fees. No hidden charges. Just simple per-transaction pricing.</p>
           </div>
@@ -442,27 +438,27 @@ export default function LandingPage() {
                   "Standard cashout (2-3 days)"
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>
               
-              <button className="w-full border-2 border-purple-600 text-purple-600 py-3 rounded-lg font-semibold hover:bg-purple-50 transition">
+              <button className="w-full border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
                 Get Started Free
               </button>
             </div>
 
             {/* Pro Plan */}
-            <div className="bg-gradient-to-br from-purple-700 to-purple-400 rounded-2xl p-8 text-white relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-sm font-bold">
+            <div className="bg-gradient-to-br from-blue-700 to-blue-400 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-sm font-bold">
                 POPULAR
               </div>
               
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2">Pro</h3>
                 <div className="text-5xl font-bold mb-2">$9.99</div>
-                <p className="text-purple-100">per month</p>
+                <p className="text-blue-100">per month</p>
               </div>
               
               <ul className="space-y-4 mb-8">
@@ -482,10 +478,10 @@ export default function LandingPage() {
                 ))}
               </ul>
               
-              <button className="w-full bg-white text-purple-700 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+              <button className="w-full bg-white text-blue-700 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                 Start Free Trial
               </button>
-              <p className="text-center text-sm text-purple-100 mt-3">7-day free trial, cancel anytime</p>
+              <p className="text-center text-sm text-blue-100 mt-3">7-day free trial, cancel anytime</p>
             </div>
           </div>
         </div>
@@ -495,9 +491,9 @@ export default function LandingPage() {
       <section id="faq" className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-purple-600 font-semibold text-sm uppercase tracking-wide">FAQ</span>
+            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">FAQ</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
-              Frequently Asked <span className="bg-gradient-to-r from-purple-700 to-purple-400 bg-clip-text text-transparent">Questions</span>
+              Frequently Asked <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">Questions</span>
             </h2>
           </div>
           
@@ -525,7 +521,7 @@ export default function LandingPage() {
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-700 to-purple-400 rounded-3xl p-12 md:p-16 text-center text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-700 to-blue-400 rounded-3xl p-12 md:p-16 text-center text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-32 -mt-32"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -ml-24 -mb-24"></div>
             
@@ -533,14 +529,14 @@ export default function LandingPage() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Boost Your Earnings?
               </h2>
-              <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Join thousands of service workers already earning more with Tip Me. Get started in minutes.
               </p>
-              <button className="bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition inline-flex items-center space-x-2">
+              <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition inline-flex items-center space-x-2">
                 <span>Create Your Profile</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <p className="text-purple-100 mt-4 text-sm">No credit card required • Free forever</p>
+              <p className="text-blue-100 mt-4 text-sm">No credit card required • Free forever</p>
             </div>
           </div>
         </div>
@@ -552,7 +548,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-700 to-purple-400 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-700 to-blue-400 rounded-lg flex items-center justify-center">
                   <DollarSign className="w-5 h-5 text-white" />
                 </div>
                 <span className="text-xl font-bold">Tip Me</span>
