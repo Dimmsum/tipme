@@ -84,7 +84,7 @@ export default function Dashboard() {
               <TrendingUp className="w-5 h-5" />
               <span>Dashboard</span>
             </a>
-            <a href="#" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition">
+            <a href="/myqrcode" className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition">
               <QrCode className="w-5 h-5" />
               <span>My QR Code</span>
             </a>
